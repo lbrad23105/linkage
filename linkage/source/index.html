@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src = ".\jquery\jquery-1.12.0.js"></script>
+        <style>
+          body
+          {
+              background-color: #212121;
+              margin: 0px;
+              width: 100%;
+          }
+          
+          #logo
+          {
+              height: 40px;
+              position: fixed;
+              left: 70px;
+          }
+          
+          .header
+          {
+              width: 100%;
+              height: 45px;
+              background-color: #003893;
+              position: fixed;
+              padding-right: 75px;
+              z-index: 5;
+          }
+          
+          .side-bar
+          {
+              width: 45px;
+              height: 100%;
+              float: left; 
+              z-index: 6;
+              position: fixed;
+              background-color: #1A1A1A;
+          }
+          
+          .link
+          {
+              width: 150px;
+              height:  150px;
+              position: relative;
+              overflow: hidden;
+              background-color: white;
+          }
+          
+          .link-big
+          {
+              width: 500px;
+              height:  150px;
+              position: relative;
+              overflow: hidden;
+              background-color: white;
+          }
+          
+          .link:hover
+          {
+              width: 150px;
+              height:  150px;
+              position: relative;
+              overflow: hidden;
+              background-color: #90A4AE;
+          }
+          
+          .content
+          {
+              float: center;
+              position: absolute;
+              height: 50px;
+              border: none;
+              overflow: hidden;
+              top: 50px;
+              left: 15px;
+          }
+          
+          .link-table
+          {
+              top: 25px;
+              left: 65px;
+              position: relative;
+          }
+          
+          .link-holder
+          {
+              padding-left: 5px;
+              padding-right: 5px;
+          }
+          
+          .req-link
+          {
+              border: 0px solid #000000;
+              background-color: #263238;
+              width: 45px;
+              height: 45px;
+          }
+          
+          .req-link:hover
+          {
+              background-color: #607D8B;
+          }
+          
+          .feedback-form
+          {
+              visibility: hidden;
+          }
+         
+        </style>
+    </head>
+    
+    <body>
+        <div class = "main">
+            
+            
+            <div class = "side-bar">
+                <button class = "req-link" title="Request Link">
+                    <img src = ".\img\plus.png"/>
+                </button>
+                <form class = "feedback-form">
+                    <input type = "text">
+                    <input type = "submit">
+                </form>
+            </div>
+            
+            <table class = "link-table">
+                <tr>
+                    <td class = "link-holder" id = "adp">
+                        <a href= "https://web.ung.edu/adp" title = "ADP Portal">
+                        <div class = "link">
+                                <img src = ".\img\adp-high-res-logo-transparent.gif" class = "content"/>
+                        </div>
+                        </a>
+                    </td>
+                    <td class = "link-holder">
+                        <a href= "https://my.ung.edu" title = "myUNG">
+                        <div class = "link">
+                                <img src = ".\img\2424147_orig.png" class = "content" style = "height:60px"/>
+                        </div>
+                        </a>
+                    </td>
+                    <td class = "link-holder">
+                        <a href= "https:\\www.google.com\" title = "Google">
+                        <div class = "link">
+                            <img src = ".\img\new-google-logo-2015.png" class = "content"/>
+                        </div>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    
+        <script>
+            $(document).ready(function(){
+                $(".req-link").click(function(){
+                    $(".side-bar").animate({width : "500px"});
+                    $(".feedback-form").css({visibility : "visible"});                
+                });
+            });
+        </script>
+    
+    
+    </body>
+</html>
+        
