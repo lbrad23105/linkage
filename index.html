@@ -2,7 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <script src = ".\jquery\jquery-1.12.0.js"></script>
+        <script src = ".\linkage\source\jquery\jquery-1.12.0.js"></script>
+        <title>Linkage</title>
         <style>
           body
           {
@@ -106,6 +107,11 @@
           {
               visibility: hidden;
           }
+          
+          .side-bar-logo
+          {
+              width: 25px;
+          }
          
         </style>
     </head>
@@ -116,12 +122,15 @@
             
             <div class = "side-bar">
                 <button class = "req-link" title="Request Link">
-                    <img src = ".\img\plus.png"/>
+                    <img src = ".\linkage\source\img\plus.png"/>
                 </button>
                 <form class = "feedback-form">
                     <input type = "text">
                     <input type = "submit">
                 </form>
+                <div>
+                   <!-- <img src = "./img/linkage-small.png" class = "side-bar-logo"/>-->
+                </div>
             </div>
             
             <table class = "link-table">
@@ -129,21 +138,21 @@
                     <td class = "link-holder" id = "adp">
                         <a href= "https://web.ung.edu/adp" title = "ADP Portal">
                         <div class = "link">
-                                <img src = ".\img\adp-high-res-logo-transparent.gif" class = "content"/>
+                                <img src = ".\linkage\source\img\adp-high-res-logo-transparent.gif" class = "content"/>
                         </div>
                         </a>
                     </td>
                     <td class = "link-holder">
-                        <a href= "https://my.ung.edu" title = "myUNG">
+                        <a href= "https://ung.edu/" title = "myUNG">
                         <div class = "link">
-                                <img src = ".\img\2424147_orig.png" class = "content" style = "height:60px"/>
+                                <img src = ".\linkage\source\img\2424147_orig.png" class = "content" style = "height:60px"/>
                         </div>
                         </a>
                     </td>
                     <td class = "link-holder">
                         <a href= "https:\\www.google.com\" title = "Google">
                         <div class = "link">
-                            <img src = ".\img\new-google-logo-2015.png" class = "content"/>
+                            <img src = ".\linkage\source\img\new-google-logo-2015.png" class = "content"/>
                         </div>
                         </a>
                     </td>
@@ -154,13 +163,10 @@
         <script>
             $(document).ready(function(){
                 $(".req-link").click(function(){
-                    $(".side-bar").animate({width : "500px"});
+                    $(".side-bar").animate({width : "500px"},500);
                     $(".feedback-form").css({visibility : "visible"});                
                 });
             });
         </script>
-    
-    
     </body>
-</html>
-        
+</html>        
